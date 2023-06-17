@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		BE4920542A3DD1DB00463036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920532A3DD1DB00463036 /* AppDelegate.swift */; };
 		BE4920562A3DD1DB00463036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920552A3DD1DB00463036 /* SceneDelegate.swift */; };
-		BE4920582A3DD1DB00463036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920572A3DD1DB00463036 /* ViewController.swift */; };
+		BE4920582A3DD1DB00463036 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920572A3DD1DB00463036 /* MainViewController.swift */; };
 		BE49205D2A3DD1DC00463036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE49205C2A3DD1DC00463036 /* Assets.xcassets */; };
 		BE4920602A3DD1DC00463036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE49205E2A3DD1DC00463036 /* LaunchScreen.storyboard */; };
 		BE4920682A3DD7F200463036 /* Romeo-and-Juliet.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE4920672A3DD7F200463036 /* Romeo-and-Juliet.txt */; };
+		BE4920C02A4087B900463036 /* TextToWordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920BF2A4087B900463036 /* TextToWordsService.swift */; };
+		BE4920C22A40AB5B00463036 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920C12A40AB5B00463036 /* MainViewModel.swift */; };
+		BE4920C82A41064F00463036 /* SortingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920C72A41064F00463036 /* SortingOptions.swift */; };
+		BE4920CA2A41065600463036 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4920C92A41065600463036 /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE4920502A3DD1DB00463036 /* FirstAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4920532A3DD1DB00463036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE4920552A3DD1DB00463036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE4920572A3DD1DB00463036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE4920572A3DD1DB00463036 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BE49205C2A3DD1DC00463036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE49205F2A3DD1DC00463036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE4920612A3DD1DC00463036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE4920672A3DD7F200463036 /* Romeo-and-Juliet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Romeo-and-Juliet.txt"; sourceTree = "<group>"; };
+		BE4920672A3DD7F200463036 /* Romeo-and-Juliet.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "Romeo-and-Juliet.txt"; sourceTree = "<group>"; };
+		BE4920BF2A4087B900463036 /* TextToWordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToWordsService.swift; sourceTree = "<group>"; };
+		BE4920C12A40AB5B00463036 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		BE4920C72A41064F00463036 /* SortingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingOptions.swift; sourceTree = "<group>"; };
+		BE4920C92A41065600463036 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,91 @@
 		BE4920522A3DD1DB00463036 /* FirstAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				BE4920532A3DD1DB00463036 /* AppDelegate.swift */,
-				BE4920552A3DD1DB00463036 /* SceneDelegate.swift */,
-				BE4920572A3DD1DB00463036 /* ViewController.swift */,
+				BE4920BB2A407EBD00463036 /* Application */,
+				BE4920BC2A4084C000463036 /* Services */,
+				BE4920BD2A4084CF00463036 /* Screens */,
+				BE4920BA2A407E3800463036 /* Resources */,
+			);
+			path = FirstAssignment;
+			sourceTree = "<group>";
+		};
+		BE4920BA2A407E3800463036 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BE4920672A3DD7F200463036 /* Romeo-and-Juliet.txt */,
 				BE49205C2A3DD1DC00463036 /* Assets.xcassets */,
 				BE49205E2A3DD1DC00463036 /* LaunchScreen.storyboard */,
 				BE4920612A3DD1DC00463036 /* Info.plist */,
 			);
-			path = FirstAssignment;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE4920BB2A407EBD00463036 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920532A3DD1DB00463036 /* AppDelegate.swift */,
+				BE4920552A3DD1DB00463036 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BE4920BC2A4084C000463036 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920CB2A410B2A00463036 /* TextToWordsService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BE4920BD2A4084CF00463036 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920BE2A4084D500463036 /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BE4920BE2A4084D500463036 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920C32A4102BE00463036 /* Views */,
+				BE4920C42A4102C400463036 /* ViewModels */,
+				BE4920C62A41063B00463036 /* Models */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BE4920C32A4102BE00463036 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920572A3DD1DB00463036 /* MainViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE4920C42A4102C400463036 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920C12A40AB5B00463036 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BE4920C62A41063B00463036 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920C72A41064F00463036 /* SortingOptions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE4920CB2A410B2A00463036 /* TextToWordsService */ = {
+			isa = PBXGroup;
+			children = (
+				BE4920BF2A4087B900463036 /* TextToWordsService.swift */,
+				BE4920C92A41065600463036 /* Word.swift */,
+			);
+			path = TextToWordsService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE4920582A3DD1DB00463036 /* ViewController.swift in Sources */,
+				BE4920C22A40AB5B00463036 /* MainViewModel.swift in Sources */,
+				BE4920CA2A41065600463036 /* Word.swift in Sources */,
+				BE4920C82A41064F00463036 /* SortingOptions.swift in Sources */,
+				BE4920582A3DD1DB00463036 /* MainViewController.swift in Sources */,
+				BE4920C02A4087B900463036 /* TextToWordsService.swift in Sources */,
 				BE4920542A3DD1DB00463036 /* AppDelegate.swift in Sources */,
 				BE4920562A3DD1DB00463036 /* SceneDelegate.swift in Sources */,
 			);
@@ -281,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8Y98YG73DY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FirstAssignment/Info.plist;
+				INFOPLIST_FILE = FirstAssignment/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -308,7 +396,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8Y98YG73DY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FirstAssignment/Info.plist;
+				INFOPLIST_FILE = FirstAssignment/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -18,7 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = ViewController()
+        
+        // I would add here (and in second task too) some Assembly entity, which will be assembling controllers
+        // And if more screens will be needed to implement in future, Router or Coordinator entities should be added
+        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        window?.backgroundColor = UIColor(named: "WindowBackgroundColor")
         window?.makeKeyAndVisible()
     }
 
